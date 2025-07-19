@@ -465,7 +465,7 @@ largestVectorisation(MLIRContext *ctx, const LinearLayout &cvt, int bitwidth,
     }
     return {v, permutation};
   }
-  return {1, permutation};
+  llvm_unreachable("Vectorization < 1 is not valid");
 }
 } // namespace
 
